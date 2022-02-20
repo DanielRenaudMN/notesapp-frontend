@@ -4,6 +4,10 @@ const getAll = () => {
   return httpClient.get("/notes");
 };
 
-const exportGetAll = { getAll };
+const create = (data) => {
+  return httpClient.post("/notes", data);
+}
 
-export default exportGetAll;
+const exportAll = { getAll, create };
+
+export default exportAll;

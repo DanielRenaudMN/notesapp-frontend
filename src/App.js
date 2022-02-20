@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AddNote } from "./components/AddNote";
 import Navbar from "./components/Navbar";
 import NotesList from "./components/NotesList";
 import NotFound from "./components/NotFound";
@@ -12,7 +13,8 @@ function App() {
         <div>
           <Routes>
             <Route exact path="/" element={<NotesList />} />
-            <Route path="*" component={<NotFound />} />
+            <Route exact path="/add" element={<AddNote/>}/>
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </div>
